@@ -1,9 +1,5 @@
 namespace App;
 
-public class Cat : Animal
+public class Cat
 {
-    public override string MakeSound()
-    {
-        return "Miauw!";
-    }
 }
