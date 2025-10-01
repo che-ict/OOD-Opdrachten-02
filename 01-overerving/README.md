@@ -5,21 +5,6 @@
 
 **Gebruiksvoorbeeld:**
 ```csharp
-public class Vehicle
-{
-    public double Speed { get; set; }
-    public string Color { get; set; }
-}
-
-public class Car : Vehicle
-{
-    public int NumberOfDoors { get; set; }
-}
-
-public class Motorcycle : Vehicle
-{
-    public bool HasSidecar { get; set; }
-}
 
 // Om te testen:
 var myCar = new Car { Speed = 180, Color = "Red", NumberOfDoors = 4 };

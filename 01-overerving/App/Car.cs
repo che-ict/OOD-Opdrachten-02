@@ -1,6 +1,5 @@
 namespace App;
 
-public class Car : Vehicle
+public class Car
 {
-    public int NumberOfDoors { get; set; }
 }

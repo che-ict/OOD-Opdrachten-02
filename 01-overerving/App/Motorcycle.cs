@@ -1,6 +1,5 @@
 namespace App;
 
-public class Motorcycle : Vehicle
+public class Motorcycle
 {
-    public bool HasSidecar { get; set; }
 }
