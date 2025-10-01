@@ -13,30 +13,31 @@ public class QueryService
 
     public List<Blog> GetBlogsOrderedByUrl()
     {
-        return _context.Blogs.OrderBy(b => b.Url).ToList();
+        // TODO: Implement a query to get all blogs ordered by URL
+        throw new NotImplementedException();
     }
 
     public List<Blog> GetBlogsWithPosts()
     {
-        return _context.Blogs.Include(b => b.Posts).ToList();
+        // TODO: Implement a query to get all blogs including their posts
+        throw new NotImplementedException();
     }
 
     public List<Blog> GetBlogsByUrlFragment(string fragment)
     {
-        return _context.Blogs.Where(b => b.Url.Contains(fragment)).ToList();
+        // TODO: Implement a query to get blogs whose URL contains a specific fragment
+        throw new NotImplementedException();
     }
 
     public object GetPostsWithBlogUrl()
     {
-        return _context.Posts
-            .Select(p => new { p.Title, p.Blog.Url })
-            .ToList();
+        // TODO: Implement a query to get post titles and their associated blog URLs
+        throw new NotImplementedException();
     }
 
     public object GetPostCountPerBlog()
     {
-        return _context.Blogs
-            .Select(b => new { BlogUrl = b.Url, NumberOfPosts = b.Posts.Count })
-            .ToList();
+        // TODO: Implement a query to get the number of posts for each blog
+        throw new NotImplementedException();
     }
 }

@@ -4,8 +4,7 @@ public static class Utility
 {
     public static void Swap<T>(ref T a, ref T b)
     {
-        T temp = a;
-        a = b;
-        b = temp;
+        // TODO: Implement a generic Swap method
+        throw new NotImplementedException();
     }
 }

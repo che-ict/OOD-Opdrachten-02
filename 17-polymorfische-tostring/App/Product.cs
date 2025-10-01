@@ -13,6 +13,7 @@ public class Product : IComparable<Product>
 
     public override string ToString()
     {
-        return $"{Name} - €{Price:F2}";
+        // TODO: Override the ToString method to return a formatted string of the product's Name and Price
+        throw new NotImplementedException();
     }
 }

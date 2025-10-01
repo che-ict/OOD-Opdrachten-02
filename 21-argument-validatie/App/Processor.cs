@@ -4,9 +4,7 @@ public class Processor
 {
     public void ProcessName(string name)
     {
-        if (name == null)
-        {
-            throw new ArgumentNullException(nameof(name));
-        }
+        // TODO: Implement argument validation for the 'name' parameter
+        throw new NotImplementedException();
     }
 }

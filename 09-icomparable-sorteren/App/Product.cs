@@ -7,7 +7,7 @@ public class Product : IComparable<Product>
 
     public int CompareTo(Product other)
     {
-        if (other == null) return 1;
-        return this.Price.CompareTo(other.Price);
+        // TODO: Implement the CompareTo method to compare products by price
+        throw new NotImplementedException();
     }
 }

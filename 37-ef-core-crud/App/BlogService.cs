@@ -11,39 +11,31 @@ public class BlogService
 
     public Blog AddBlog(string url)
     {
-        var blog = new Blog { Url = url };
-        _context.Blogs.Add(blog);
-        _context.SaveChanges();
-        return blog;
+        // TODO: Implement adding a new blog to the database
+        throw new NotImplementedException();
     }
 
     public List<Blog> GetAllBlogs()
     {
-        return _context.Blogs.ToList();
+        // TODO: Implement retrieving all blogs from the database
+        throw new NotImplementedException();
     }
 
     public Blog? GetBlog(int blogId)
     {
-        return _context.Blogs.Find(blogId);
+        // TODO: Implement retrieving a single blog by its ID
+        throw new NotImplementedException();
     }
 
     public void UpdateBlogUrl(int blogId, string newUrl)
     {
-        var blog = _context.Blogs.Find(blogId);
-        if (blog != null)
-        {
-            blog.Url = newUrl;
-            _context.SaveChanges();
-        }
+        // TODO: Implement updating the URL of an existing blog
+        throw new NotImplementedException();
     }
 
     public void DeleteBlog(int blogId)
     {
-        var blog = _context.Blogs.Find(blogId);
-        if (blog != null)
-        {
-            _context.Blogs.Remove(blog);
-            _context.SaveChanges();
-        }
+        // TODO: Implement deleting a blog by its ID
+        throw new NotImplementedException();
     }
 }

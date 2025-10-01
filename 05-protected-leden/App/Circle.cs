@@ -4,6 +4,6 @@ public class Circle : Shape
 {
     public Circle(string color)
     {
-        _color = color; // Heeft toegang tot protected lid
+        // TODO: Initialize the _color field using the protected member from the base class
     }
 }

@@ -13,25 +13,19 @@ public class PostService
 
     public Post AddPost(int blogId, string title, string content)
     {
-        var blog = _context.Blogs.Find(blogId);
-        if (blog == null)
-        {
-            throw new Exception("Blog not found");
-        }
-
-        var post = new Post { Title = title, Content = content, BlogId = blogId };
-        _context.Posts.Add(post);
-        _context.SaveChanges();
-        return post;
+        // TODO: Implement adding a new post to a specific blog
+        throw new NotImplementedException();
     }
 
     public List<Post> GetPostsForBlog(int blogId)
     {
-        return _context.Posts.Where(p => p.BlogId == blogId).ToList();
+        // TODO: Implement retrieving all posts for a specific blog
+        throw new NotImplementedException();
     }
 
     public Blog? GetBlogWithPosts(int blogId)
     {
-        return _context.Blogs.Include(b => b.Posts).FirstOrDefault(b => b.BlogId == blogId);
+        // TODO: Implement retrieving a blog and its associated posts
+        throw new NotImplementedException();
     }
 }

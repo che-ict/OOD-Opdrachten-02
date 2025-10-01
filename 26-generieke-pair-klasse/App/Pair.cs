@@ -7,7 +7,7 @@ public class Pair<TFirst, TSecond>
 
     public Pair(TFirst first, TSecond second)
     {
-        First = first;
-        Second = second;
+        // TODO: Implement the constructor to initialize First and Second properties
+        throw new NotImplementedException();
     }
 }

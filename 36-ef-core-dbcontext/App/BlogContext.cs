@@ -4,7 +4,7 @@ namespace App;
 
 public class BlogContext : DbContext
 {
-    public DbSet<Blog> Blogs { get; set; }
+    // TODO: Define a DbSet for Blog entities
 
     public BlogContext(DbContextOptions<BlogContext> options)
         : base(options)
@@ -13,9 +13,7 @@ public class BlogContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        if (!optionsBuilder.IsConfigured)
-        {
-            optionsBuilder.UseInMemoryDatabase("Blogs");
-        }
+        // TODO: Configure the DbContext to use an in-memory database named "Blogs"
+        throw new NotImplementedException();
     }
 }
