@@ -8,11 +8,8 @@ public class SealedClassTests
     [Test]
     public void FinalReport_IsSealed_Test()
     {
-        // This test verifies that FinalReport is sealed and cannot be inherited from.
-        // Attempting to uncomment the following line will result in a compile-time error:
-        // public class DraftReport : FinalReport { }
-
-        Assert.Pass("FinalReport is a sealed class. Attempting to inherit from it will cause a compile-time error.");
+        var typeVar = typeof(FinalReport);
+        Assert.That(typeVar.IsSealed, Is.True, "Class is not sealed");
     }
 
     [Test]
