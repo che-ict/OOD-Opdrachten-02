@@ -2,6 +2,11 @@ using App;
 
 namespace App.Tests;
 
+private class Song {
+    public string Artist{get;set;}
+    public string Title{get;set;}
+}
+
 public class GenericCacheTests
 {
     [Test]
@@ -29,5 +34,17 @@ public class GenericCacheTests
         var intCache = new Cache<int>();
         var retrievedInt = intCache.Get("number1");
         Assert.That(retrievedInt, Is.EqualTo(0)); // default for int is 0
+    }
+
+    [Test]
+    public void Cache_GetSongList(){
+        var albumCache = new Cache<List<Song>>();
+        var songs = new List<Song>(){
+            new Song{Artist:"Blur", Title:"Song 1"},
+            new Song{Artist:"Blur", Title:"Song 2"}
+        };
+        albumCache.Add("blur-album", songs);
+        var retrievedAlbums = albumCache.Get("blur-album");
+        Assert.That(retrievedAlbums, Is.EqualTo(songs));
     }
 }
