@@ -8,16 +8,15 @@ public class InterfaceTests
     public void JsonProcessor_Deserialize_SetsDataCorrectly()
     {
         var processor = new JsonProcessor();
-        processor.Deserialize("{}");
-        Assert.That(processor.Data, Is.EqualTo("Geparsed"));
+        processor.Deserialize("{\"Data\":\"Hello World\"}");
+        Assert.That(processor.Data, Is.EqualTo("Hello World"));
     }
 
     [Test]
     public void JsonProcessor_Serialize_ReturnsCorrectFormat()
     {
         var processor = new JsonProcessor();
-        processor.Deserialize("some data"); // Set some data first
-        // The example shows {{'Data':'{Data}'}}, so I'll test for that.
-        Assert.That(processor.Serialize(), Is.EqualTo("{'Data':'Geparsed'}"));
+        processor.Deserialize("{\"Data\":\"This is test data\"}");
+        Assert.That(processor.Serialize(), Is.EqualTo("{\"Data\":\"This is test data\"}"));
     }
 }
